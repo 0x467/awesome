@@ -407,7 +407,7 @@ local function tasklist_update(s, w, buttons, filter, data, style, update_functi
 
     for _, c in ipairs(list) do
         if not (c.skip_taskbar or c.hidden
-            or c.type == "splash" or c.type == "dock" or c.type == "desktop")
+            or c.type == "splash" or c.type == "dock" or c.type == "desktop" or c.name == "Picture-in-Picture")
             and filter(c, s) then
             table.insert(clients, c)
         end
